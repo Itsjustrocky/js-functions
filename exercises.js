@@ -26,8 +26,8 @@ console.log(testGreeting); // printing the output value of the function.
  *
  * These two variables will be used to invoke the functions #2 - #5.
 */ 
-
-
+var bango1 = 1;
+var bango2 = 2;
 
 /*
  * #2
@@ -44,6 +44,12 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log `sum` to test your code.
 */
 
+function add(num1,num2){
+    return num1 + num2;
+}
+
+var sum = add(bango1, bango2)
+console.log(sum);
 
 
 /*
@@ -60,7 +66,11 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log `difference` to test your code.
 */ 
 
-
+function subtract(num1,num2){
+    return num1 - num2;
+}
+var sub = subtract(bango1, bango2)
+console.log(sub);
 
 /*
  * #4
@@ -75,7 +85,11 @@ console.log(testGreeting); // printing the output value of the function.
  * Invoke the function and assign it to a variable named `product`.
  * Console.log `product` to test your code.
 */
-
+function multiply(num1,num2){
+    return num1 * num2;
+}  
+var product = multiply(bango1,bango2)
+console.log(product);
 
 
 /*
@@ -91,8 +105,11 @@ console.log(testGreeting); // printing the output value of the function.
  * Invoke the function and assign it to a variable named `quotient`.
  * Console.log `quotient` to test your code.
 */
-
-
+function divide(num1,num2){
+    return num1/num2;
+}
+var quotient = divide(bango1,bango2)
+console.log(quotient);
 
 /*
  * #6
@@ -105,7 +122,12 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will return the string "There are `x` states in the United States." Where `x` is the value when you invoke the function. Invoke this function using the variable `sum`. 
  * Console.log your result.
 */
-
+var x;
+function checkSum(x){
+    var str = "There are " + x + " states in the United States.";
+    return str;
+}
+console.log (checkSum(0));
 
 
 /*
@@ -119,8 +141,11 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will return the string "Last night I dreamt that I ate `x` Taco Bell soft tacos."  Where `x` is the value when you invoke the function. Invoke this function using the variable `difference`.
  * Console.log your results.
 */ 
-
-
+function checkDifference(x){
+    var str = "Last night I dreamt that I ate " + x + " Taco Bell soft tacos.";
+    return str;
+}
+console.log(checkDifference(0));
 
 /*
  * #8
@@ -132,8 +157,10 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will multiply the values stored in the sum and product variables.
  * Console.log your result.  
 */
-
-
+function checkProduct(x){
+    return sum * product;
+}
+console.log(checkProduct());
 
 /*
  * #9
@@ -145,8 +172,10 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will multiply the values stored in the product and quotient variables.
  * Console.log your result.  
 */
-
-
+function checkQuotient(x){
+    return product* quotient;
+}
+console.log(checkQuotient());
 
 /*
  * #10
@@ -167,9 +196,16 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will add the first two parameters together. Then with the sum of that operation, subtract it from the third parameter. PLEASE USE YOUR PREVIOUS FUNCTIONS FOR THIS EXERCISE. 
  * Console.log your result.
 */ 
+var bango3 = 3;
+var bango4 = 4;
+var bango5 = 5;
 
-
-
+function addThenSubtract(num1,num2,num3) {
+    adding = add(bango3,bango4);
+    subtracting = subtract(adding,bango5);
+    return subtracting;
+}
+console.log(addThenSubtract());
 /*
  * #11
  * Function - multiplyThenDivide
@@ -183,8 +219,12 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will multiply the first two parameters together. Then with the product of that operation, divide it from the third parameter. PLEASE USE YOUR PREVIOUS FUNCTIONS FOR THIS EXERCISE. 
  * Console.log your result.
 */ 
-
-
+function multiplyThenDivide(num1,num2,num3){
+    multiplying = multiply(bango3,bango4);
+    dividing = divide(multiplying,bango5);
+    return dividing; 
+}
+console.log(multiplyThenDivide());
 
 /*
  * #12
@@ -197,9 +237,12 @@ console.log(testGreeting); // printing the output value of the function.
  *
  *  This function `returns` back a string which represents someone's full name. Invoke this function by passing in your first  and last name into the function. Store the return value into a variable named `myFullName` and console.log this variable to show your result.
 */
-
-
-
+var firstName = 'Taddanai';
+var lastName = 'Rungpetchanan';
+function createFullName(name1,name2){  
+return name1 + ' ' + name2;
+};
+console.log(createFullName(firstName,lastName));
 /*
  * #13 
  * Function - eatFood
@@ -213,6 +256,13 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will use the previous `createFullName` function above to create a message. For example, if you invoked the function like this: eatFood("Biggie", "Smalls", "Won Ton Soup"); it will display the message "Biggie Smalls eats Won Ton Soup everyday for breakfast."
  * Console.log your result.
  */
+function eatFood(firstName, lastName, food){
+    return firstName + lastName + 'eats ' + food + 'everyday for breakfast';
+
+}
+
+var biggiesFavoriteFood = eatFood('Biggie', ' smalls ','Won Ton Soup');
+console.log(biggiesFavoriteFood);
 
 
 
@@ -228,9 +278,17 @@ console.log(testGreeting); // printing the output value of the function.
  * Create a function that will take in a parameter named `inches`. This function will convert inches to centimeters(cm).
  * Console.log your result. 
 */
+var inches = 10.5;
+var convert = 2.54;
 
+function shoeSize(inches, convert) {
+  var conv = inches * convert;
+  
+  return conv;
+  
+}
 
-
+console.log("shoeSize", shoeSize(inches, convert));
 /*
  * #15
  * Function allCaps
@@ -240,7 +298,19 @@ console.log(testGreeting); // printing the output value of the function.
  * Example input: "believe you can and you're halfway there."
  * Example output: "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE."
 */
- 
+var str = "ello blazers";
+var res = str.toUpperCase();
+
+function allCaps(str) {
+  
+  var str = "ello blazers";
+  var cap = str.toUpperCase();
+  
+  return cap;
+}
+
+console.log(allCaps(str));
+
 
 
 /*
@@ -250,7 +320,13 @@ console.log(testGreeting); // printing the output value of the function.
  * This function will capitalize only the first letter in the variable phase above. 
  * Console.log your result.
 */
+var str;
+function oneCap(str) {
+  
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
+console.log(oneCap("hi"));
 
 
 /*
